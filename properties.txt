@@ -1,0 +1,21 @@
+background-color 
+width 
+font-size
+color 
+text-align 
+font-family
+font-varient
+font-weight
+font-style 
+
+
+border
+border-style
+border-width
+border-color
+border-radius
+border-left
+border:1px solid blue 
+
+
+

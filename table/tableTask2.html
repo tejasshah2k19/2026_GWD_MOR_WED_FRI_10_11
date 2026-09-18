@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+        }
+
+        .table-card {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .heading h2 {
+            margin: 0;
+        }
+
+        .add-btn {
+            background: #222;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .add-btn i {
+            margin-right: 6px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #222;
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 14px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr {
+            transition: 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f7f9fc;
+        }
+
+        /* Employee */
+
+        .employee {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .employee-info strong {
+            display: block;
+        }
+
+        .employee-info small {
+            color: #777;
+        }
+
+        /* Department */
+
+        .department i {
+            margin-right: 7px;
+        }
+
+        /* Status */
+
+        .status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .active {
+            background: #dff5e5;
+            color: #16743b;
+        }
+
+        .leave {
+            background: #fff0c7;
+            color: #8a6500;
+        }
+
+        /* Contact */
+
+        .contact i {
+            margin-right: 8px;
+        }
+
+        /* Actions */
+
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            width: 34px;
+            height: 34px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .view {
+            background: #e8f1ff;
+        }
+
+        .edit {
+            background: #fff3d9;
+        }
+
+        .delete {
+            background: #ffe5e5;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.08);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="table-card">
+
+        <div class="heading">
+
+            <h2>
+                <i class="fa-solid fa-users"></i>
+                Employee Management
+            </h2>
+<!-- 
+            <button class="add-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Employee
+            </button> -->
+
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Contact</th>
+                        <th>Joining Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>#101</td>
+
+                        <td>
+                            <div class="employee">
+
+                                <div class="avatar">
+                                    RS
+                                </div>
+
+                                <div class="employee-info">
+                                    <strong>Ronil Shah</strong>
+                                    <small>Senior Developer</small>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td class="department">
+                            <i class="fa-solid fa-code"></i>
+                            Development
+                        </td>
+
+                        <td class="contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            ronil@gmail.com
+                        </td>
+
+                        <td>
+                            <i class="fa-regular fa-calendar"></i>
+                            12 Jan 2024
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="actions">
+
+                                <button class="action-btn view"
+                                        title="View">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+
+                                <button class="action-btn edit"
+                                        title="Edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+
+                                <button class="action-btn delete"
+                                        title="Delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>#102</td>
+
+                        <td>
+                            <div class="employee">
+
+                                <div class="avatar">
+                                    PS
+                                </div>
+
+                                <div class="employee-info">
+                                    <strong>Priya Shah</strong>
+                                    <small>UI/UX Designer</small>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td class="department">
+                            <i class="fa-solid fa-palette"></i>
+                            Design
+                        </td>
+
+                        <td class="contact">
+                            <i class="fa-solid fa-phone"></i>
+                            98765 43210
+                        </td>
+
+                        <td>
+                            <i class="fa-regular fa-calendar"></i>
+                            20 Feb 2024
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="actions">
+
+                                <button class="action-btn view">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+
+                                <button class="action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+
+                                <button class="action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>#103</td>
+
+                        <td>
+                            <div class="employee">
+
+                                <div class="avatar">
+                                    AM
+                                </div>
+
+                                <div class="employee-info">
+                                    <strong>Amit Mehta</strong>
+                                    <small>Project Manager</small>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td class="department">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            Management
+                        </td>
+
+                        <td class="contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            amit@gmail.com
+                        </td>
+
+                        <td>
+                            <i class="fa-regular fa-calendar"></i>
+                            05 Mar 2023
+                        </td>
+
+                        <td>
+                            <span class="status leave">
+                                <i class="fa-solid fa-clock"></i>
+                                On Leave
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="actions">
+
+                                <button class="action-btn view">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+
+                                <button class="action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+
+                                <button class="action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

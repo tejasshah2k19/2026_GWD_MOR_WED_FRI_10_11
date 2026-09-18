@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        /* Table Header */
+
+        thead {
+            background-color: #222;
+            color: white;
+        }
+
+        th {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #444;
+        }
+
+        /* Table Body */
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        /* Zebra Stripes */
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Hover Effect */
+
+        tbody tr:hover {
+            background-color: #dfefff;
+            cursor: pointer;
+        }
+
+        /* Center specific columns */
+
+        .center {
+            text-align: center;
+        }
+
+        /* Marks */
+
+        .marks {
+            font-weight: bold;
+        }
+
+        /* Status Badge */
+
+        .pass {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .fail {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        tfoot {
+            background-color: #eeeeee;
+            font-weight: bold;
+        }
+
+        tfoot td {
+            padding: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Result</h1>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student Name</th>
+                        <th>Course</th>
+                        <th class="center">Java</th>
+                        <th class="center">Python</th>
+                        <th class="center">SQL</th>
+                        <th class="center">Percentage</th>
+                        <th class="center">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Rahul Patel</td>
+                        <td>Java Full Stack</td>
+                        <td class="center marks">85</td>
+                        <td class="center marks">90</td>
+                        <td class="center marks">88</td>
+                        <td class="center">87.67%</td>
+                        <td class="center">
+                            <span class="pass">PASS</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Priya Shah</td>
+                        <td>Java Full Stack</td>
+                        <td class="center marks">92</td>
+                        <td class="center marks">88</td>
+                        <td class="center marks">95</td>
+                        <td class="center">91.67%</td>
+                        <td class="center">
+                            <span class="pass">PASS</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Amit Mehta</td>
+                        <td>Python</td>
+                        <td class="center marks">70</td>
+                        <td class="center marks">82</td>
+                        <td class="center marks">75</td>
+                        <td class="center">75.67%</td>
+                        <td class="center">
+                            <span class="pass">PASS</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Neha Joshi</td>
+                        <td>Data Science</td>
+                        <td class="center marks">55</td>
+                        <td class="center marks">48</td>
+                        <td class="center marks">52</td>
+                        <td class="center">51.67%</td>
+                        <td class="center">
+                            <span class="pass">PASS</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Karan Desai</td>
+                        <td>Java Full Stack</td>
+                        <td class="center marks">35</td>
+                        <td class="center marks">42</td>
+                        <td class="center marks">38</td>
+                        <td class="center">38.33%</td>
+                        <td class="center">
+                            <span class="fail">FAIL</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Class Average</td>
+                        <td class="center">67.4</td>
+                        <td class="center">70</td>
+                        <td class="center">69.6</td>
+                        <td class="center">69%</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

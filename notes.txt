@@ -1,0 +1,63 @@
+HTML 
+
+
+CSS 
+
+
+1) internal css 
+2) exteranl css 
+3) inline css 
+
+
+HTML -> CSS -> code -> internal CSS 
+HTML1  + CSS1 ->  exteranl css 
+
+
+
+where ? head 
+how   ? style
+
+
+internal-->
+can we style any where in the html page? or we must have to inside head ? 
+ans : yes 
+
+
+CSS -> html page --> design --> 
+
+properties -> name:value
+
+
+selectors ---> select -> property -> 
+1) tag 
+2) class 
+3) id 
+4)
+5)
+
+
+color -> constant -> reg yellow 
+            hex    #da795c 
+            rgb     rgb(100, 201, 100)
+
+
+div
+span
+
+
+font-family is used to change font type --- font face ---
+
+font-family: 'Courier New', Courier, monospace;
+
+font-size : 100px; 
+             large; 
+             larger;
+             medium; 
+             
+------------------------------------------------------------------------------------------------------
+
+
+icons -> 
+    lib 
+        fontawesom 
+        

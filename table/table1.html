@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Student Result</title>
+
+    <!-- External Font Awesome CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" >
+
+    <style>
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        table {
+            width: 700px;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #243b55;
+            color: white;
+            padding: 15px;
+            font-size: 17px;
+        }
+
+        td {
+            border: 1px solid #cccccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .pass {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+        <i class="fa-solid fa-chart-column"></i>
+        Student Result
+    </h1>
+
+    <table>
+
+        <tr>
+            <th>
+                <i class="fa-solid fa-id-card"></i>
+                Roll No
+            </th>
+
+            <th>
+                <i class="fa-solid fa-user"></i>
+                Student
+            </th>
+
+            <th>C</th>
+
+            <th>
+                <i class="fa-brands fa-python"></i>
+                Python
+            </th>
+
+            <th>
+                <i class="fa-solid fa-circle-check"></i>
+                Result
+            </th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Rahul Patel</td>
+            <td>85</td>
+            <td>90</td>
+            <td class="pass">
+                <i class="fa-solid fa-check"></i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Priya Shah</td>
+            <td>92</td>
+            <td>88</td>
+            <td class="pass">
+                <i class="fa-solid fa-check"></i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Amit Patel</td>
+            <td>65</td>
+            <td>58</td>
+            <td class="fail">
+                <i class="fa-solid fa-xmark"></i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Neha Patel</td>
+            <td>78</td>
+            <td>82</td>
+            <td class="pass">
+                <i class="fa-solid fa-check"></i>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
