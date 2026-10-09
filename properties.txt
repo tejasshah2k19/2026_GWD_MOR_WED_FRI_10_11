@@ -18,4 +18,12 @@ border-left
 border:1px solid blue 
 
 
+margin
+padding 
 
+background-image:url()
+background-size 
+background-position 
+background-attachment
+
+---------------------------------------------

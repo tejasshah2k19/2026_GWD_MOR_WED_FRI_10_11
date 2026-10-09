@@ -1,0 +1,48 @@
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    box-shadow: -10px -10px, 10px 10px;
+    margin: auto;
+}
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    box-shadow: 10px 10px 10px;
+    margin: auto;
+}
+
+
+.box3{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    margin: auto;
+    box-shadow: 10px 10px 10px gray;
+}
+
+
+.box4{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    margin: auto;
+    box-shadow:  10px 10px 10px 5px gray;
+}
+
+
+.box5{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    margin: auto;
+    box-shadow: inset 10px 10px 10px 5px gray;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
