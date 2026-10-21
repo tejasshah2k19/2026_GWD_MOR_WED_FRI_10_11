@@ -94,3 +94,11 @@ row - col
 
 
 -------------------------------------------------------------------------------------------------------
+color 
+text-decoration
+text-align 
+text-transform 
+letter-spacing
+word-spacing 
+text-indent 
+text-shadow 
