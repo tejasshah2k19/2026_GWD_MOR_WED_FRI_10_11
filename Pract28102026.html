@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice Demo</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+    color: #222;
+}
+
+.main-title {
+    text-align: center;
+    color: #173f7a;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #176b87;
+}
+
+/* 1. Height and Width */
+.size-box {
+    width: 250px;
+    height: 150px;
+    background-color: lightblue;
+    border: 2px solid steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 2. Text Shadow */
+.shadow-text {
+    color: navy;
+    text-shadow: 3px 3px 4px gray;
+}
+
+.glow-text {
+    color: #0077cc;
+    text-shadow: 0 0 10px skyblue;
+}
+
+/* 3. Text Decoration */
+.underline {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: green;
+}
+
+/* 4. Box Shadow */
+.box-shadow-demo,
+.deep-shadow,
+.hover-shadow {
+    width: 220px;
+    padding: 25px;
+    margin: 25px 5px;
+    background-color: white;
+    text-align: center;
+}
+
+.box-shadow-demo {
+    box-shadow: 5px 5px 10px gray;
+}
+
+.deep-shadow {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hover-shadow {
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 0 20px steelblue;
+}
+
+/* 5. Border */
+.solid-border {
+    border: 3px solid blue;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.dashed-border {
+    border: 3px dashed red;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.rounded-border {
+    border: 3px solid green;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.different-borders {
+    border-top: 4px solid red;
+    border-right: 4px dashed blue;
+    border-bottom: 4px dotted green;
+    border-left: 4px double orange;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+ 
+
+</style>
+</head>
+<body>
+
+    <h1 class="main-title">CSS Practice Demo</h1>
+
+    <section>
+        <h2>1. Height and Width</h2>
+        <div class="size-box">Height: 150px<br>Width: 250px</div>
+    </section>
+
+    <section>
+        <h2>2. Text Shadow</h2>
+        <h1 class="shadow-text">Welcome to CSS</h1>
+        <h1 class="glow-text">CSS Effects</h1>
+    </section>
+
+    <section>
+        <h2>3. Text Decoration</h2>
+        <p class="underline">This text has underline.</p>
+        <p class="overline">This text has overline.</p>
+        <p class="strike">This text has line-through.</p>
+        <a class="no-decoration" href="#">
+            Link without underline
+        </a>
+    </section>
+
+    <section>
+        <h2>4. Box Shadow</h2>
+        <div class="box-shadow-demo">Simple Shadow</div>
+        <div class="deep-shadow">Deep Shadow</div>
+        <div class="hover-shadow">Move mouse over me</div>
+    </section>
+
+    <section>
+        <h2>5. Border</h2>
+        <div class="solid-border">Solid Border</div>
+        <div class="dashed-border">Dashed Border</div>
+        <div class="rounded-border">Rounded Border</div>
+        <div class="different-borders">Different Side Borders</div>
+    </section>
+ 
+</body>
+</html>

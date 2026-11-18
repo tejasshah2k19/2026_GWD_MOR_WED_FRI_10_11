@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Palace Hotel</title>
+
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            height: 80px;
+            width: 100%;
+            background-color: #102c4a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            text-decoration-color: gold;
+            text-decoration-thickness: 2px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 380px;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600")
+                center/cover no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            text-shadow: 3px 3px 6px black;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+        .hero button {
+            padding: 13px 28px;
+            background-color: #d9a441;
+            color: #102c4a;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 25px;
+            color: #102c4a;
+        }
+
+        .section-title h2 {
+            text-decoration: underline;
+            text-decoration-color: #d9a441;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 8px;
+        }
+
+        /* ROOM CARDS */
+        .rooms {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 0 20px 40px;
+        }
+
+        .room-card {
+            width: 320px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room-info {
+            padding: 18px;
+        }
+
+        .room-info h3 {
+            color: #102c4a;
+            margin-top: 0;
+        }
+
+        .room-info p {
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 23px;
+            font-weight: bold;
+            color: #138044;
+        }
+
+        .old-price {
+            font-size: 15px;
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        .book-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #102c4a;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #102c4a;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .book-btn:hover {
+            background-color: white;
+            color: #102c4a;
+        }
+
+        /* SPECIAL OFFER WITH BORDER IMAGE */
+        .offer {
+            width: 85%;
+            max-width: 900px;
+            margin: 10px auto 45px;
+            padding: 25px;
+            text-align: center;
+            background-color: white;
+
+            border: 7px solid transparent;
+            border-image: linear-gradient(
+                45deg, gold, orange, #102c4a
+            ) 1;
+        }
+
+        .offer h2 {
+            color: #102c4a;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+
+        .offer p {
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #102c4a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 650px) {
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero {
+                height: 320px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .room-card {
+                width: 100%;
+                max-width: 380px;
+            }
+
+            .offer {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Grand Palace Hotel</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero" id="home">
+        <h1>Experience Luxury & Comfort</h1>
+        <p>Your perfect stay begins here.</p>
+        <button onclick="document.getElementById('rooms').scrollIntoView({behavior:'smooth'})">
+            Explore Rooms
+        </button>
+    </section>
+
+    <!-- ROOM SECTION -->
+    <div class="section-title" id="rooms">
+        <h2>Our Luxury Rooms</h2>
+        <p>Choose the perfect room for your stay.</p>
+    </div>
+
+    <section class="rooms">
+
+        <!-- ROOM 1 -->
+        <div class="room-card">
+            <img
+                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=700"
+                alt="Deluxe hotel room">
+
+            <div class="room-info">
+                <h3>Deluxe Room</h3>
+                <p>Comfortable room with a beautiful interior and modern facilities.</p>
+                <span class="old-price">₹4,000</span>
+                <p class="price">₹2,999 / night</p>
+                <a href="#contact" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- ROOM 2 -->
+        <div class="room-card">
+            <img
+                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=700"
+                alt="Premium hotel room">
+
+            <div class="room-info">
+                <h3>Premium Room</h3>
+                <p>Spacious accommodation with elegant design and premium comfort.</p>
+                <span class="old-price">₹6,000</span>
+                <p class="price">₹4,499 / night</p>
+                <a href="#contact" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- ROOM 3 -->
+        <div class="room-card">
+            <img
+                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700"
+                alt="Luxury suite">
+
+            <div class="room-info">
+                <h3>Luxury Suite</h3>
+                <p>Enjoy a premium stay with extra space and luxurious surroundings.</p>
+                <span class="old-price">₹10,000</span>
+                <p class="price">₹7,499 / night</p>
+                <a href="#contact" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SPECIAL OFFER -->
+    <section class="offer" id="offers">
+        <h2>Special Weekend Offer!</h2>
+        <p>Get up to 25% off on selected room bookings.</p>
+        <p><strong>Book your next stay and enjoy more comfort for less.</strong></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h3>Grand Palace Hotel</h3>
+        <p>Address: Ahmedabad, Gujarat, India</p>
+        <p>Email: info@example.com</p>
+        <p>&copy; 2026 Grand Palace Hotel. All rights reserved.</p>
+        <a href="#home">Back to Top ↑</a>
+    </footer>
+
+</body>
+</html>
